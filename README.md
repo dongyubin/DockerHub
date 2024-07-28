@@ -20,6 +20,8 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 
 | DockerHub镜像仓库                                            | 镜像加速器地址                    |
 | ------------------------------------------------------------ | --------------------------------- |
+| [镜像使用说明](https://www.geekery.cn/free-service/docker-hub-mirror.html)： 支持docker命令行账户登录，支持推送到dockerhub账户。 | `https://hub.geekery.cn`          |
+|                                                              | `https://ghcr.geekery.cn`         |
 | [镜像使用说明](https://dockerhub.icu/)                       | `https://dockerhub.icu`           |
 |                                                              | `hub.rat.dev`                     |
 |                                                              | `docker.wanpeng.top`              |
@@ -45,6 +47,8 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 |                                                              | ~~docker.1panel.live~~            |
 |                                                              | ~~https://dockerhub.jobcher.com~~ |
 |                                                              | ~~https://docker.chenby.cn~~      |
+
+
 
 ### 使用教程
 

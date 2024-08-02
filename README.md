@@ -16,7 +16,7 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 
 此列表只收录无需限定条件的DockerHub镜像源，感谢这些公益服务者。
 
-**2024年7月24日 亲测可用**
+**2024年8月2日 亲测可用**
 
 | DockerHub镜像仓库                                            | 镜像加速器地址                    |
 | ------------------------------------------------------------ | --------------------------------- |
@@ -25,6 +25,7 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 | [镜像使用说明](https://dockerhub.icu/)                       | `https://dockerhub.icu`           |
 |                                                              | `hub.rat.dev`                     |
 |                                                              | `docker.wanpeng.top`              |
+| [docker X镜像加速站](https://dockerx.org/post/about/)        | `https://hub.dockerx.org/`        |
 | [镜像使用说明](https://doublezonline.cloud/)                 | `https://doublezonline.cloud`     |
 | [镜像使用说明](https://docker.mrxn.net/)                     | `https://docker.mrxn.net`         |
 | [镜像使用说明](https://lynn520.xyz/)                         | `https://lynn520.xyz`             |

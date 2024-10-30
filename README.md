@@ -16,7 +16,7 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 
 此列表只收录无需限定条件的DockerHub镜像源，感谢这些公益服务者。
 
-**2024年10月9日 亲测可用**
+**2024年10月30日 亲测可用**
 
 | DockerHub镜像仓库                                            | 镜像加速器地址           |
 | ------------------------------------------------------------ | ------------------------ |
@@ -26,6 +26,7 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 | [Docker Hub Container Image Library](https://docker.fxxk.dedyn.io/) | `https://docker.fxxk.dedyn.io`       |
 | [Dockerhub镜像加速说明](https://docker.xn--6oq72ry9d5zx.cn/) | `https://docker.xn--6oq72ry9d5zx.cn` |
 | [Dockerhub镜像加速说明](https://docker.zhai.cm/)             | `https://docker.zhai.cm`             |
+| [Dockerhub镜像加速说明](https://docker.5z5f.com/) | `https://docker.5z5f.com` |
 | [Dockerhub镜像加速说明](https://a.ussh.net/)                 | `https://a.ussh.net`                 |
 | [AtomHub 可信镜像仓库平台 ](https://atomhub.openatom.cn/)（只包含基础镜像，共336个） | `https://atomhub.openatom.cn`        |
 | [DaoCloud 镜像站](https://github.com/DaoCloud/public-image-mirror) | `https://docker.m.daocloud.io`       |
@@ -61,11 +62,16 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<EOF
 {
-    "registry-mirrors": [
-        "https://docker.anyhub.us.kg",
-        "https://dockerhub.icu",
-        "https://docker.awsl9527.cn"
-    ]
+  "registry-mirrors": [
+    "https://dockerpull.com",
+    "https://docker.1panel.dev",
+    "https://docker.fxxk.dedyn.io",
+    "https://docker.xn--6oq72ry9d5zx.cn",
+    "https://docker.zhai.cm",
+    "https://docker.5z5f.com",
+    "https://a.ussh.net",
+    "https://docker.m.daocloud.io"
+  ]
 }
 EOF
 sudo systemctl daemon-reload
@@ -122,3 +128,4 @@ docker pull hub.uuuadc.top/library/mysql:5.7
 - [brighill/registry-mirror](https://github.com/brighill/registry-mirror)：: 自建简易Docker镜像加速&缓存服务（gcr.io、quay.io、nvcr.io、docker.io）
 - [bboysoulcn/registry-mirror](https://github.com/bboysoulcn/registry-mirror)：包含Dockerhub、gcr、ghcr、k8sgcr、quay、registryk8s
 - [kubesre/docker-registry-mirrors](https://github.com/kubesre/docker-registry-mirrors)：多平台容器镜像代理服务,支持 Docker Hub, GitHub, Google, k8s, Quay, Microsoft 等镜像仓库.
+- [dockerhub2ghcr.io](https://github.com/foss-android/dockerhub2ghcr.io)：一键把 DockerHub 镜像搬运到 GitHub 容器注册表 (GHCR.IO)

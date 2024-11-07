@@ -14,9 +14,11 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 
 ## DockerHub国内镜像源列表
 
-此列表只收录无需限定条件的DockerHub镜像源，感谢这些公益服务者。
+国内使用 Docker 的朋友们，可能都遇到过配置镜像源来加速镜像拉取的操作。然而，最近几个月发现许多曾经常用的国内镜像站（包括各种云服务商和高校镜像站）已经无法使用。
 
-**2024年10月30日 亲测可用**
+此列表只收录目前可用的 DockerHub 镜像站和镜像加速地址，感谢这些公益服务者。
+
+**2024年11月7日 亲测国内现在还能用的 Docker 镜像**
 
 | DockerHub镜像仓库                                            | 镜像加速器地址           |
 | ------------------------------------------------------------ | ------------------------ |
@@ -28,33 +30,52 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 | [Dockerhub镜像加速说明](https://docker.zhai.cm/)             | `https://docker.zhai.cm`             |
 | [Dockerhub镜像加速说明](https://docker.5z5f.com/) | `https://docker.5z5f.com` |
 | [Dockerhub镜像加速说明](https://a.ussh.net/)                 | `https://a.ussh.net`                 |
+|                                                              | `hub.littlediary.cn`                 |
+|                                                              | `hub.crdz.gq`                        |
+|                                                              | `docker.unsee.tech`                  |
+|                                                              | `docker.kejilion.pro`                |
+|                                                              | `registry.dockermirror.com`          |
+|                                                              | `hub.rat.dev`                        |
+|                                                              | `dhub.kubesre.xyz`                   |
+|                                                              | `docker.nastool.de`                  |
+|                                                              | `docker.udayun.com`                  |
+|                                                              | `docker.rainbond.cc`                 |
+|                                                              | `hub.geekery.cn`                     |
+|                                                              | `docker.1panelproxy.com`             |
 | [AtomHub 可信镜像仓库平台 ](https://atomhub.openatom.cn/)（只包含基础镜像，共336个） | `https://atomhub.openatom.cn`        |
 | [DaoCloud 镜像站](https://github.com/DaoCloud/public-image-mirror) | `https://docker.m.daocloud.io`       |
-| 已失效DockerHub镜像仓库                                      |                                      |
-| [docker-registry-mirrors](https://github.com/kubesre/docker-registry-mirrors): 支持 Docker Hub, GitHub, Google, k8s, Quay, Microsoft 等镜像仓库. | ~~dhub.kubesre.xyz~~                 |
-| ~~[镜像使用说明](https://dislabaiot.xyz/)~~                  | ~~https://dislabaiot.xyz~~           |
-| ~~[Dockerhub镜像加速说明](https://docker.wget.at/)~~         | ~~https://docker.wget.at~~           |
-| ~~[DockerHub 镜像加速代理](https://docker.anyhub.us.kg/)~~   | ~~https://docker.anyhub.us.kg~~      |
-| ~~[DockerHub 镜像加速代理](https://hub.gog.email/)~~         | ~~https://hub.gog.email~~            |
-| ~~[镜像使用说明](https://ginger20240704.asia/)~~             | ~~`https://ginger20240704.asia`~~    |
-| ~~[镜像使用说明](https://lynn520.xyz/)~~                     | ~~`https://lynn520.xyz`~~            |
-| ~~[镜像使用说明](https://docker.mrxn.net/)~~                 | ~~`https://docker.mrxn.net`~~        |
-| ~~[镜像使用说明](https://dockerhub.icu/)~~                   | ~~`https://dockerhub.icu`~~          |
-|                                                              | ~~`hub.rat.dev`~~                    |
-|                                                              | ~~`docker.wanpeng.top`~~             |
-| ~~[镜像使用说明](https://doublezonline.cloud/)~~             | ~~`https://doublezonline.cloud`~~    |
-| ~~[镜像使用说明](https://docker.awsl9527.cn/)~~              | ~~https://docker.awsl9527.cn~~       |
-| ~~[Docker镜像加速站](https://hub.uuuadc.top/)~~（因流量太大，作者已关停） | ~~https://hub.uuuadc.top~~           |
-| ~~[Docker镜像加速站](https://docker.ckyl.me/)~~              | ~~https://docker.ckyl.me~~           |
-| ~~[镜像使用说明](https://docker.hpcloud.cloud/)~~            | ~~https://docker.hpcloud.cloud~~     |
-|                                                              | ~~docker.1panel.live~~               |
-|                                                              | ~~https://dockerhub.jobcher.com~~    |
-|                                                              | ~~https://docker.chenby.cn~~         |
 
+### 已失效DockerHub加速镜像仓库
+
+| DockerHub镜像仓库                                            | 镜像加速器地址                    |
+| ------------------------------------------------------------ | --------------------------------- |
+| [docker-registry-mirrors](https://github.com/kubesre/docker-registry-mirrors): 支持 Docker Hub, GitHub, Google, k8s, Quay, Microsoft 等镜像仓库. | ~~dhub.kubesre.xyz~~              |
+| ~~[镜像使用说明](https://dislabaiot.xyz/)~~                  | ~~https://dislabaiot.xyz~~        |
+| ~~[Dockerhub镜像加速说明](https://docker.wget.at/)~~         | ~~https://docker.wget.at~~        |
+| ~~[DockerHub 镜像加速代理](https://docker.anyhub.us.kg/)~~   | ~~https://docker.anyhub.us.kg~~   |
+| ~~[DockerHub 镜像加速代理](https://hub.gog.email/)~~         | ~~https://hub.gog.email~~         |
+| ~~[镜像使用说明](https://ginger20240704.asia/)~~             | ~~`https://ginger20240704.asia`~~ |
+| ~~[镜像使用说明](https://lynn520.xyz/)~~                     | ~~`https://lynn520.xyz`~~         |
+| ~~[镜像使用说明](https://docker.mrxn.net/)~~                 | ~~`https://docker.mrxn.net`~~     |
+| ~~[镜像使用说明](https://dockerhub.icu/)~~                   | ~~`https://dockerhub.icu`~~       |
+|                                                              | ~~`hub.rat.dev`~~                 |
+|                                                              | ~~`docker.wanpeng.top`~~          |
+| ~~[镜像使用说明](https://doublezonline.cloud/)~~             | ~~`https://doublezonline.cloud`~~ |
+| ~~[镜像使用说明](https://docker.awsl9527.cn/)~~              | ~~https://docker.awsl9527.cn~~    |
+| ~~[Docker镜像加速站](https://hub.uuuadc.top/)~~（因流量太大，作者已关停） | ~~https://hub.uuuadc.top~~        |
+| ~~[Docker镜像加速站](https://docker.ckyl.me/)~~              | ~~https://docker.ckyl.me~~        |
+| ~~[镜像使用说明](https://docker.hpcloud.cloud/)~~            | ~~https://docker.hpcloud.cloud~~  |
+|                                                              | ~~docker.1panel.live~~            |
+|                                                              | ~~https://dockerhub.jobcher.com~~ |
+|                                                              | ~~https://docker.chenby.cn~~      |
+|                                                              | ~~https://vipmall.store/~~        |
+|                                                              | ~~https://tzq.asia~~              |
+|                                                              | ~~https://leitong.top/~~          |
+|                                                              | ~~hub.xdark.top~~                 |
 
 ### 使用教程
 
-1. 为了加速镜像拉取，使用以下命令设置**registry mirror**
+1. 为了加速镜像拉取，使用以下命令设置 **registry mirror**
 
 > 支持系统：Ubuntu 16.04+、Debian 8+、CentOS 7+
 
@@ -63,13 +84,27 @@ sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<EOF
 {
   "registry-mirrors": [
-    "https://dockerpull.com",
+    "https://dockerpull.org",
     "https://docker.1panel.dev",
     "https://docker.fxxk.dedyn.io",
     "https://docker.xn--6oq72ry9d5zx.cn",
     "https://docker.zhai.cm",
     "https://docker.5z5f.com",
     "https://a.ussh.net",
+    "https://docker.cloudlayer.icu",
+    "https://hub.littlediary.cn",
+    "https://hub.crdz.gq",
+    "https://docker.unsee.tech",
+    "https://docker.kejilion.pro",
+    "https://registry.dockermirror.com",
+    "https://hub.rat.dev",
+    "https://dhub.kubesre.xyz",
+    "https://docker.nastool.de",
+    "https://docker.udayun.com",
+    "https://docker.rainbond.cc",
+    "https://hub.geekery.cn",
+    "https://docker.1panelproxy.com",
+    "https://atomhub.openatom.cn",
     "https://docker.m.daocloud.io"
   ]
 }
@@ -78,13 +113,21 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-2. 使用DockerHub Proxy，以下以 `hub.uuuadc.top` 为例：可以根据列表自行替换
+2. 使用 DockerHub Proxy，以下以 `hub.uuuadc.top` 为例：可以根据列表自行替换来测试是否拉取成功
 
 ```sh
 docker pull hub.uuuadc.top/library/mysql:5.7
 ```
 
 说明：library是一个特殊的命名空间，它代表的是官方镜像。如果是某个用户的镜像就把library替换为镜像的用户名
+
+或用以下命令检查是否生效：
+
+```shell
+ping -c 3 dockerpull.org
+```
+
+![Dockerhub加速源命令检查效果图](https://cdn.wwkejishe.top/wp-cdn-02/2024/202411071046451.png)
 
 ## 国内DockerHub镜像加速器还有哪些？
 

@@ -145,6 +145,47 @@ ping -c 3 dockerpull.org
 
 ![Dockerhub加速源命令检查效果图](https://cdn.wwkejishe.top/wp-cdn-02/2024/202411071046451.png)
 
+## DockerHub containerd的配置文件
+
+由网友 [rxzy-krli](https://github.com/rxzy-krli) 提供
+
+```sh
+sudo tee /etc/containerd/config.toml <<EOF
+[plugins."io.containerd.grpc.v1.cri".registry]
+  [plugins."io.containerd.grpc.v1.cri".registry.mirrors]
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"]
+      endpoint = [
+        "https://dockerpull.org",
+        "https://docker.1panel.dev",
+        "https://docker.foreverlink.love",
+        "https://docker.fxxk.dedyn.io",
+        "https://docker.xn--6oq72ry9d5zx.cn",
+        "https://docker.zhai.cm",
+        "https://docker.5z5f.com",
+        "https://a.ussh.net",
+        "https://docker.cloudlayer.icu",
+        "https://hub.littlediary.cn",
+        "https://hub.crdz.gq",
+        "https://docker.unsee.tech",
+        "https://docker.kejilion.pro",
+        "https://registry.dockermirror.com",
+        "https://hub.rat.dev",
+        "https://dhub.kubesre.xyz",
+        "https://docker.nastool.de",
+        "https://docker.udayun.com",
+        "https://docker.rainbond.cc",
+        "https://hub.geekery.cn",
+        "https://docker.1panelproxy.com",
+        "https://atomhub.openatom.cn",
+        "https://docker.m.daocloud.io",
+        "https://docker.1ms.run",
+        "https://docker.linkedbus.com"
+      ]
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart containerd
+```
+
 ## 国内DockerHub镜像加速器还有哪些？
 
 - [国内的 Docker Hub 镜像加速器](https://gist.github.com/y0ngb1n/7e8f16af3242c7815e7ca2f0833d3ea6?permalink_comment_id=5068535)：由国内教育机构与各大云服务商提供的镜像加速服务

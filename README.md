@@ -26,7 +26,7 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 
 > 请注意！有些镜像站仅提供基础镜像或白名单镜像，如果某个加速地址无法拉取到所需的镜像，可以尝试切换到其他地址。有些代理站点是热心网友自费搭建的，请务必合理使用。
 
-**2024年12月12日 亲测国内现在还能用的 Docker 镜像**
+**2024年12月26日 亲测国内现在还能用的 Docker 镜像**
 
 | DockerHub镜像仓库                                            | 镜像加速器地址                       |
 | ------------------------------------------------------------ | ------------------------------------ |
@@ -36,6 +36,10 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 | [镜像加速说明](https://docker.1panel.dev/)                   | `https://docker.1panel.dev`          |
 | [镜像加速说明](https://docker.foreverlink.love/)             | `https://docker.foreverlink.love`    |
 | [Docker Hub Container Image Library](https://docker.fxxk.dedyn.io/) | `https://docker.fxxk.dedyn.io`       |
+| [Docker Hub Search](https://dytt.online/)                    | `https://dytt.online`                |
+| [Docker Hub Search](https://func.ink/)                       | `https://func.ink`                   |
+| [Docker Hub Search](https://lispy.org/)                      | `https://lispy.org`                  |
+| [Docker Hub Search](https://docker.xiaogenban1993.com/)      | `https://docker.xiaogenban1993.com`  |
 | [Dockerhub镜像加速说明](https://docker.xn--6oq72ry9d5zx.cn/) | `https://docker.xn--6oq72ry9d5zx.cn` |
 | [Dockerhub镜像加速说明](https://docker.zhai.cm/)             | `https://docker.zhai.cm`             |
 | [Dockerhub镜像加速说明](https://docker.5z5f.com/)            | `https://docker.5z5f.com`            |
@@ -85,6 +89,8 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 |                                                              | ~~https://tzq.asia~~              |
 |                                                              | ~~https://leitong.top/~~          |
 |                                                              | ~~hub.xdark.top~~                 |
+| ~~[Docker Hub Search](https://docker.bowen.games/)~~         |                                   |
+| ~~[Docker Hub Search](https://futureperiod.icu/)~~           |                                   |
 
 ### 配置Dockerhub镜像源使用教程
 
@@ -121,7 +127,11 @@ sudo tee /etc/docker/daemon.json <<EOF
     "https://atomhub.openatom.cn",
     "https://docker.m.daocloud.io",
     "https://docker.1ms.run",
-    "https://docker.linkedbus.com"
+    "https://docker.linkedbus.com",
+    "https://dytt.online",
+    "https://func.ink",
+    "https://lispy.org",
+    "https://docker.xiaogenban1993.com"
   ]
 }
 EOF
@@ -179,7 +189,11 @@ sudo tee /etc/containerd/config.toml <<EOF
         "https://atomhub.openatom.cn",
         "https://docker.m.daocloud.io",
         "https://docker.1ms.run",
-        "https://docker.linkedbus.com"
+        "https://docker.linkedbus.com",
+        "https://dytt.online",
+        "https://func.ink",
+        "https://lispy.org",
+        "https://docker.xiaogenban1993.com"
       ]
 EOF
 sudo systemctl daemon-reload
@@ -258,3 +272,12 @@ Environment="HTTPS_PROXY=http://127.0.0.1:1080"
 Environment="NO_PROXY=localhost,127.0.0.0/8,192.168.0.0/16,172.16.0.0/12,10.0.0.0/8"
 ```
 
+## 博主推荐仓库
+
+<a href="https://github.com/dongyubin/Free-AppleId-Serve">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=dongyubin&repo=Free-AppleId-Serve" />
+</a>
+
+## Star History
+
+![dongyubin/DockerHub](https://api.star-history.com/svg?repos=dongyubin/DockerHub&type=Date)

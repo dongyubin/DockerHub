@@ -1,6 +1,6 @@
 # DockerHub 国内加速镜像列表
 
-[国内可用Docker镜像源加速器/DockerHub镜像汇总(2024年12月12日)](https://www.wangdu.site/course/2109.html)（博客版及时更新）
+[国内可用Docker镜像源加速器/DockerHub镜像汇总](https://www.wangdu.site/course/2109.html)（博客版及时更新）
 
 ## DockerHub是什么
 
@@ -26,71 +26,74 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 
 > 请注意！有些镜像站仅提供基础镜像或白名单镜像，如果某个加速地址无法拉取到所需的镜像，可以尝试切换到其他地址。有些代理站点是热心网友自费搭建的，请务必合理使用。
 
-**2024年12月26日 亲测国内现在还能用的 Docker 镜像**
+**2025年3月5日 亲测国内现在还能用的 Docker 镜像**
 
-| DockerHub镜像仓库                                            | 镜像加速器地址                       |
-| ------------------------------------------------------------ | ------------------------------------ |
-| [Docker Proxy 镜像加速](https://dockerpull.org/)（[来源地址](https://linux.do/t/topic/114345)） | `https://dockerpull.org`             |
-| [镜像使用说明](https://www.geekery.cn/free-service/docker-hub-mirror.html)： 支持docker命令行账户登录，支持推送到dockerhub账户。 | `https://hub.geekery.cn`             |
-| [毫秒镜像](https://1ms.run/)                                 | `docker.1ms.run`                     |
-| [镜像加速说明](https://docker.1panel.dev/)                   | `https://docker.1panel.dev`          |
-| [镜像加速说明](https://docker.foreverlink.love/)             | `https://docker.foreverlink.love`    |
-| [Docker Hub Container Image Library](https://docker.fxxk.dedyn.io/) | `https://docker.fxxk.dedyn.io`       |
-| [Docker Hub Search](https://dytt.online/)                    | `https://dytt.online`                |
-| [Docker Hub Search](https://func.ink/)                       | `https://func.ink`                   |
-| [Docker Hub Search](https://lispy.org/)                      | `https://lispy.org`                  |
-| [Docker Hub Search](https://docker.xiaogenban1993.com/)      | `https://docker.xiaogenban1993.com`  |
-| [Dockerhub镜像加速说明](https://docker.xn--6oq72ry9d5zx.cn/) | `https://docker.xn--6oq72ry9d5zx.cn` |
-| [Dockerhub镜像加速说明](https://docker.zhai.cm/)             | `https://docker.zhai.cm`             |
-| [Dockerhub镜像加速说明](https://docker.5z5f.com/)            | `https://docker.5z5f.com`            |
-| [Dockerhub镜像加速说明](https://a.ussh.net/)                 | `https://a.ussh.net`                 |
-| [Docker Layer ICU 镜像加速](https://cloudlayer.icu/)         | `https://docker.cloudlayer.icu`      |
-| [链氪镜像-链氪网公益Docker镜像站-Docker-DockerHub国内镜像源加速｜链氪巴士](https://docker.linkedbus.com/) | `https://docker.linkedbus.com`       |
-|                                                              | `hub.littlediary.cn`                 |
-|                                                              | `hub.crdz.gq`                        |
-|                                                              | `docker.unsee.tech`                  |
-|                                                              | `docker.kejilion.pro`                |
-|                                                              | `registry.dockermirror.com`          |
-|                                                              | `hub.rat.dev`                        |
-|                                                              | `dhub.kubesre.xyz`                   |
-|                                                              | `docker.nastool.de`                  |
-|                                                              | `docker.udayun.com`                  |
-|                                                              | `docker.rainbond.cc`                 |
-|                                                              | `hub.geekery.cn`                     |
-|                                                              | `docker.1panelproxy.com`             |
-| [AtomHub 可信镜像仓库平台 ](https://atomhub.openatom.cn/)（只包含基础镜像，共336个） | `https://atomhub.openatom.cn`        |
-| [DaoCloud 镜像站](https://github.com/DaoCloud/public-image-mirror) | `https://docker.m.daocloud.io`       |
-| [xdark.top](https://xdark.top/)（需赞助拉取）                |                                      |
+| DockerHub镜像仓库                                            | 镜像加速器地址                            |
+| ------------------------------------------------------------ | ----------------------------------------- |
+| [毫秒镜像](https://1ms.run/)                                 | `docker.1ms.run`                          |
+| [Docker Hub Search](https://docker.mybacc.com/)              | `docker.mybacc.com`                       |
+| [Docker Hub Search](https://dytt.online/)                    | `https://dytt.online`                     |
+| [Docker Hub Search](https://func.ink/)                       | `https://func.ink`                        |
+| [Docker Hub Search](https://lispy.org/)                      | `https://lispy.org`                       |
+| [Docker Hub Search](https://docker.xiaogenban1993.com/)      | `docker.xiaogenban1993.com`               |
+| [Docker Hub Search](https://docker.yomansunter.com/)         | `docker.yomansunter.com`                  |
+| [Docker Hub Search](https://dockerhub.websoft9.com/)         | `dockerhub.websoft9.com`                  |
+| [Dockerhub镜像加速说明](https://docker.zhai.cm/)             | `https://docker.zhai.cm`                  |
+| [Dockerhub镜像加速说明](https://a.ussh.net/)                 | `https://a.ussh.net`                      |
+|                                                              | `hub.littlediary.cn`                      |
+|                                                              | `hub.rat.dev`                             |
+| [DaoCloud 镜像站](https://github.com/DaoCloud/public-image-mirror) | `https://docker.m.daocloud.io`            |
+| [xdark.top](https://xdark.top/)（需赞助拉取）                |                                           |
+| [腾讯云](https://cloud.tencent.com/document/product/457/9113)（只支持内网访问，不支持外网域名访问加速。[轻量应用服务器 安装 Docker 并配置镜像加速源](https://cloud.tencent.com/document/product/1207/45596)） | `https://mirror.ccs.tencentyun.com`       |
+| [阿里云](https://cr.console.aliyun.com/)（需登录，系统分配） | `https://<your_code>.mirror.aliyuncs.com` |
 
 ### 已失效DockerHub加速镜像仓库
 
-| DockerHub镜像仓库                                            | 镜像加速器地址                    |
-| ------------------------------------------------------------ | --------------------------------- |
-| [docker-registry-mirrors](https://github.com/kubesre/docker-registry-mirrors): 支持 Docker Hub, GitHub, Google, k8s, Quay, Microsoft 等镜像仓库. | ~~dhub.kubesre.xyz~~              |
-| ~~[镜像使用说明](https://dislabaiot.xyz/)~~                  | ~~https://dislabaiot.xyz~~        |
-| ~~[Dockerhub镜像加速说明](https://docker.wget.at/)~~         | ~~https://docker.wget.at~~        |
-| ~~[DockerHub 镜像加速代理](https://docker.anyhub.us.kg/)~~   | ~~https://docker.anyhub.us.kg~~   |
-| ~~[DockerHub 镜像加速代理](https://hub.gog.email/)~~         | ~~https://hub.gog.email~~         |
-| ~~[镜像使用说明](https://ginger20240704.asia/)~~             | ~~`https://ginger20240704.asia`~~ |
-| ~~[镜像使用说明](https://lynn520.xyz/)~~                     | ~~`https://lynn520.xyz`~~         |
-| ~~[镜像使用说明](https://docker.mrxn.net/)~~                 | ~~`https://docker.mrxn.net`~~     |
-| ~~[镜像使用说明](https://dockerhub.icu/)~~                   | ~~`https://dockerhub.icu`~~       |
-|                                                              | ~~`hub.rat.dev`~~                 |
-|                                                              | ~~`docker.wanpeng.top`~~          |
-| ~~[镜像使用说明](https://doublezonline.cloud/)~~             | ~~`https://doublezonline.cloud`~~ |
-| ~~[镜像使用说明](https://docker.awsl9527.cn/)~~              | ~~https://docker.awsl9527.cn~~    |
-| ~~[Docker镜像加速站](https://hub.uuuadc.top/)~~（因流量太大，作者已关停） | ~~https://hub.uuuadc.top~~        |
-| ~~[Docker镜像加速站](https://docker.ckyl.me/)~~              | ~~https://docker.ckyl.me~~        |
-| ~~[镜像使用说明](https://docker.hpcloud.cloud/)~~            | ~~https://docker.hpcloud.cloud~~  |
-|                                                              | ~~docker.1panel.live~~            |
-|                                                              | ~~https://dockerhub.jobcher.com~~ |
-|                                                              | ~~https://docker.chenby.cn~~      |
-|                                                              | ~~https://vipmall.store/~~        |
-|                                                              | ~~https://tzq.asia~~              |
-|                                                              | ~~https://leitong.top/~~          |
-|                                                              | ~~hub.xdark.top~~                 |
-| ~~[Docker Hub Search](https://docker.bowen.games/)~~         |                                   |
-| ~~[Docker Hub Search](https://futureperiod.icu/)~~           |                                   |
+| DockerHub镜像仓库                                            | 镜像加速器地址                                               |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [docker-registry-mirrors](https://github.com/kubesre/docker-registry-mirrors): 支持 Docker Hub, GitHub, Google, k8s, Quay, Microsoft 等镜像仓库. | ~~dhub.kubesre.xyz~~                                         |
+| [Docker Proxy 镜像加速](https://dockerpull.org/)（[来源地址](https://linux.do/t/topic/114345)） | ~~`https://dockerpull.org`（在12/27被GFW封锁）/ `cjie.eu.org`（暂时备用）~~ |
+| ~~[镜像使用说明](https://dislabaiot.xyz/)~~                  | ~~https://dislabaiot.xyz~~                                   |
+| ~~[镜像加速说明](https://docker.1panel.dev/)~~               | ~~https://docker.1panel.dev~~                                |
+| ~~[镜像加速说明](https://docker.foreverlink.love/)~~         | ~~https://docker.foreverlink.love~~                          |
+| ~~[Dockerhub镜像加速说明](https://docker.wget.at/)~~         | ~~https://docker.wget.at~~                                   |
+| ~~[DockerHub 镜像加速代理](https://docker.anyhub.us.kg/)~~   | ~~https://docker.anyhub.us.kg~~                              |
+| ~~[DockerHub 镜像加速代理](https://hub.gog.email/)~~         | ~~https://hub.gog.email~~                                    |
+| ~~[Dockerhub镜像加速说明](https://docker.5z5f.com/)~~        | ~~https://docker.5z5f.com~~                                  |
+| ~~[Dockerhub镜像加速说明](https://docker.xn--6oq72ry9d5zx.cn/)~~ | ~~https://docker.xn--6oq72ry9d5zx.cn~~                       |
+| ~~[Docker Layer ICU 镜像加速](https://cloudlayer.icu/)~~     | ~~https://docker.cloudlayer.icu~~                            |
+| ~~[镜像使用说明](https://ginger20240704.asia/)~~             | ~~`https://ginger20240704.asia`~~                            |
+| ~~[镜像使用说明](https://lynn520.xyz/)~~                     | ~~`https://lynn520.xyz`~~                                    |
+| ~~[镜像使用说明](https://docker.mrxn.net/)~~                 | ~~`https://docker.mrxn.net`~~                                |
+| ~~[镜像使用说明](https://dockerhub.icu/)~~                   | ~~`https://dockerhub.icu`~~                                  |
+|                                                              | ~~`hub.rat.dev`~~                                            |
+|                                                              | ~~hub.crdz.gq~~                                              |
+|                                                              | ~~docker.unsee.tech~~                                        |
+|                                                              | ~~registry.dockermirror.com~~                                |
+|                                                              | ~~`docker.wanpeng.top`~~                                     |
+| ~~[镜像使用说明](https://doublezonline.cloud/)~~             | ~~`https://doublezonline.cloud`~~                            |
+| ~~[镜像使用说明](https://docker.awsl9527.cn/)~~              | ~~https://docker.awsl9527.cn~~                               |
+| ~~[Docker镜像加速站](https://hub.uuuadc.top/)~~（因流量太大，作者已关停） | ~~https://hub.uuuadc.top~~                                   |
+| ~~[Docker镜像加速站](https://docker.ckyl.me/)~~              | ~~https://docker.ckyl.me~~                                   |
+| ~~[镜像使用说明](https://docker.hpcloud.cloud/)~~            | ~~https://docker.hpcloud.cloud~~                             |
+|                                                              | ~~docker.1panel.live~~                                       |
+|                                                              | ~~https://dockerhub.jobcher.com~~                            |
+|                                                              | ~~https://docker.chenby.cn~~                                 |
+|                                                              | ~~https://vipmall.store/~~                                   |
+|                                                              | ~~https://tzq.asia~~                                         |
+|                                                              | ~~https://leitong.top/~~                                     |
+|                                                              | ~~hub.xdark.top~~                                            |
+|                                                              | ~~docker.nastool.de~~                                        |
+|                                                              | ~~docker.udayun.com~~                                        |
+| ~~[Docker Hub Search](https://docker.bowen.games/)~~         |                                                              |
+| ~~[Docker Hub Search](https://futureperiod.icu/)~~           |                                                              |
+| ~~[AtomHub 可信镜像仓库平台 ](https://atomhub.openatom.cn/)（~~只包含基础镜像，共336个，已于2024年12月30日下线） | ~~`https://atomhub.openatom.cn`~~                            |
+| ~~[Docker Hub Container Image Library](https://docker.fxxk.dedyn.io/)~~ | ~~`https://docker.fxxk.dedyn.io`~~                           |
+| [镜像使用说明](https://www.geekery.cn/free-service/docker-hub-mirror.html)： 支持docker命令行账户登录，支持推送到dockerhub账户。 | ~~`https://hub.geekery.cn`~~                                 |
+| [链氪镜像-链氪网公益Docker镜像站-Docker-DockerHub国内镜像源加速｜链氪巴士](https://docker.linkedbus.com/) | ~~https://docker.linkedbus.com~~                             |
+|                                                              | ~~docker.rainbond.cc~~                                       |
+|                                                              | ~~docker.1panelproxy.com~~                                   |
+|                                                              | ~~docker.kejilion.pro~~                                      |
 
 ### 配置Dockerhub镜像源使用教程
 
@@ -103,35 +106,20 @@ sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<EOF
 {
   "registry-mirrors": [
-    "https://dockerpull.org",
-    "https://docker.1panel.dev",
-    "https://docker.foreverlink.love",
-    "https://docker.fxxk.dedyn.io",
-    "https://docker.xn--6oq72ry9d5zx.cn",
     "https://docker.zhai.cm",
-    "https://docker.5z5f.com",
     "https://a.ussh.net",
-    "https://docker.cloudlayer.icu",
     "https://hub.littlediary.cn",
-    "https://hub.crdz.gq",
-    "https://docker.unsee.tech",
-    "https://docker.kejilion.pro",
-    "https://registry.dockermirror.com",
     "https://hub.rat.dev",
-    "https://dhub.kubesre.xyz",
-    "https://docker.nastool.de",
-    "https://docker.udayun.com",
-    "https://docker.rainbond.cc",
-    "https://hub.geekery.cn",
-    "https://docker.1panelproxy.com",
     "https://atomhub.openatom.cn",
     "https://docker.m.daocloud.io",
     "https://docker.1ms.run",
-    "https://docker.linkedbus.com",
     "https://dytt.online",
     "https://func.ink",
     "https://lispy.org",
-    "https://docker.xiaogenban1993.com"
+    "https://docker.xiaogenban1993.com",
+    "https://docker.mybacc.com",
+    "https://docker.yomansunter.com",
+    "https://dockerhub.websoft9.com"
   ]
 }
 EOF
@@ -165,35 +153,20 @@ sudo tee /etc/containerd/config.toml <<EOF
   [plugins."io.containerd.grpc.v1.cri".registry.mirrors]
     [plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"]
       endpoint = [
-        "https://dockerpull.org",
-        "https://docker.1panel.dev",
-        "https://docker.foreverlink.love",
-        "https://docker.fxxk.dedyn.io",
-        "https://docker.xn--6oq72ry9d5zx.cn",
         "https://docker.zhai.cm",
-        "https://docker.5z5f.com",
         "https://a.ussh.net",
-        "https://docker.cloudlayer.icu",
         "https://hub.littlediary.cn",
-        "https://hub.crdz.gq",
-        "https://docker.unsee.tech",
-        "https://docker.kejilion.pro",
-        "https://registry.dockermirror.com",
         "https://hub.rat.dev",
-        "https://dhub.kubesre.xyz",
-        "https://docker.nastool.de",
-        "https://docker.udayun.com",
-        "https://docker.rainbond.cc",
-        "https://hub.geekery.cn",
-        "https://docker.1panelproxy.com",
         "https://atomhub.openatom.cn",
         "https://docker.m.daocloud.io",
         "https://docker.1ms.run",
-        "https://docker.linkedbus.com",
         "https://dytt.online",
         "https://func.ink",
         "https://lispy.org",
-        "https://docker.xiaogenban1993.com"
+        "https://docker.xiaogenban1993.com",
+        "https://docker.mybacc.com",
+        "https://docker.yomansunter.com",
+        "https://dockerhub.websoft9.com"
       ]
 EOF
 sudo systemctl daemon-reload

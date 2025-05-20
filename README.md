@@ -26,7 +26,9 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 
 > 请注意！有些镜像站仅提供基础镜像或白名单镜像，如果某个加速地址无法拉取到所需的镜像，可以尝试切换到其他地址。有些代理站点是热心网友自费搭建的，请务必合理使用。
 
-**2025年3月28日 亲测国内现在还能用的 Docker 镜像**
+**2025年5月20日 亲测国内现在还能用的 Docker 镜像**
+
+**2025年5月20日 亲测国内现在还能用的 Docker 镜像**
 
 | DockerHub镜像仓库                                            | 镜像加速器地址                            |
 | ------------------------------------------------------------ | ----------------------------------------- |
@@ -38,7 +40,6 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 | [Docker Hub Search](https://docker.yomansunter.com/)         | `docker.yomansunter.com`                  |
 | [Docker Hub Search](https://aicarbon.xyz/)                   | `aicarbon.xyz`                            |
 | [Docker Hub Search](https://666860.xyz/)                     | `666860.xyz`                              |
-| [Dockerhub镜像加速说明](https://docker.zhai.cm/)             | `https://docker.zhai.cm`                  |
 | [Dockerhub镜像加速说明](https://a.ussh.net/)                 | `https://a.ussh.net`                      |
 |                                                              | `hub.littlediary.cn`                      |
 |                                                              | `hub.rat.dev`                             |
@@ -97,6 +98,7 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 |                                                              | ~~docker.kejilion.pro~~                                      |
 | ~~[Docker Hub Search](https://func.ink/)~~                   | ~~https://func.ink~~                                         |
 | ~~[Docker Hub Search](https://dockerhub.websoft9.com/)~~     | ~~dockerhub.websoft9.com~~                                   |
+| ~~[Dockerhub镜像加速说明](https://docker.zhai.cm/)~~         | ~~https://docker.zhai.cm~~                                   |
 
 ### 配置Dockerhub镜像源使用教程
 
@@ -233,6 +235,19 @@ sudo systemctl restart containerd
   > 提示
   >
   > 选择一台[国外服务器](https://bestvps.wwkejishe.top/tutorial-vps/choose-vps)（比如：[RackNerd](https://bestvps.wwkejishe.top/guowai-vps/racknerd)），并且未被墙。对于域名，无需进行国内备案。你也可以通过一些平台申请免费域名。在一键部署过程中，如果选择安装Caddy，它将自动配置HTTPS。若选择部署Nginx服务，则需要自行申请一个免费的SSL证书，或者通过其他方式来实现SSL加密。
+  
+- [KSpeeder | Docker镜像加速专家](https://kspeeder.istoreos.com/)：多镜像并发下载，动态负载均衡，断点续传支持，Docker镜像代理服务
+
+  - 支持HTTPS协议
+  - 自动配置Docker镜像源
+  - 证书自动获取和缓存
+  - 多架构支持(AMD64/ARM64/ARM)
+  - 智能镜像选择和自动切换
+  - 实时下载速度监控
+  - 可视化状态监控界面
+  - **Docker Compose支持**：使用compose文件轻松部署
+  - **数据持久化**：可配置的卷挂载
+  - **自定义配置**：适应不同环境的灵活设置
 
 ## Nas 群辉 Docker pull 代理设置方法
 

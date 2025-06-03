@@ -26,12 +26,11 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 
 > 请注意！有些镜像站仅提供基础镜像或白名单镜像，如果某个加速地址无法拉取到所需的镜像，可以尝试切换到其他地址。有些代理站点是热心网友自费搭建的，请务必合理使用。
 
-**2025年5月20日 亲测国内现在还能用的 Docker 镜像**
-
-**2025年5月20日 亲测国内现在还能用的 Docker 镜像**
+**2025年6月3日 亲测国内现在还能用的 Docker 镜像**
 
 | DockerHub镜像仓库                                            | 镜像加速器地址                            |
 | ------------------------------------------------------------ | ----------------------------------------- |
+|                                                              | `https://docker.1panel.live/`             |
 | [毫秒镜像](https://1ms.run/)                                 | `docker.1ms.run`                          |
 | [Docker Hub Search](https://docker.mybacc.com/)              | `docker.mybacc.com`                       |
 | [Docker Hub Search](https://dytt.online/)                    | `https://dytt.online`                     |
@@ -111,6 +110,7 @@ sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<EOF
 {
   "registry-mirrors": [
+    "https://docker.1panel.live",
     "https://docker.1ms.run",
     "https://docker.mybacc.com",
     "https://dytt.online",
@@ -119,7 +119,6 @@ sudo tee /etc/docker/daemon.json <<EOF
     "https://docker.yomansunter.com",
     "https://aicarbon.xyz",
     "https://666860.xyz",
-    "https://docker.zhai.cm",
     "https://a.ussh.net",
     "https://hub.littlediary.cn",
     "https://hub.rat.dev",
@@ -157,6 +156,7 @@ sudo tee /etc/containerd/config.toml <<EOF
   [plugins."io.containerd.grpc.v1.cri".registry.mirrors]
     [plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"]
       endpoint = [
+        "https://docker.1panel.live",
         "https://docker.1ms.run",
         "https://docker.mybacc.com",
         "https://dytt.online",
@@ -165,7 +165,6 @@ sudo tee /etc/containerd/config.toml <<EOF
         "https://docker.yomansunter.com",
         "https://aicarbon.xyz",
         "https://666860.xyz",
-        "https://docker.zhai.cm",
         "https://a.ussh.net",
         "https://hub.littlediary.cn",
         "https://hub.rat.dev",
@@ -175,6 +174,7 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl restart containerd
 ```
+
 
 ## 国内DockerHub镜像加速器还有哪些？
 
@@ -205,7 +205,7 @@ sudo systemctl restart containerd
 ## Docker daemon 配置代理
 
 - 参考 [Docker daemon 配置代理](https://docs.docker.com/config/daemon/systemd/#httphttps-proxy)
-- [docker 设置代理，以及国内加速镜像设置](https://neucrack.com/p/286)
+- [docker 设置代理，以及国内加速镜像设置](https://neucrack.com/p/286)：国内 Docker 代理来实现加速下载，docker pull 使用 http proxy
 
 ## 如何自建 DockerHub 加速服务
 
@@ -234,7 +234,7 @@ sudo systemctl restart containerd
 
   > 提示
   >
-  > 选择一台[国外服务器](https://bestvps.wwkejishe.top/tutorial-vps/choose-vps)（比如：[RackNerd](https://bestvps.wwkejishe.top/guowai-vps/racknerd)），并且未被墙。对于域名，无需进行国内备案。你也可以通过一些平台申请免费域名。在一键部署过程中，如果选择安装Caddy，它将自动配置HTTPS。若选择部署Nginx服务，则需要自行申请一个免费的SSL证书，或者通过其他方式来实现SSL加密。
+  > 选择一台[国外服务器](https://bestvps.wwkejishe.top/tutorial-vps/choose-vps)（比如：[RackNerd](https://www.wangdu.site/fuliyouhui/1266.html)），并且未被墙。对于域名，无需进行国内备案。你也可以通过一些平台申请免费域名。在一键部署过程中，如果选择安装Caddy，它将自动配置HTTPS。若选择部署Nginx服务，则需要自行申请一个免费的SSL证书，或者通过其他方式来实现SSL加密。
   
 - [KSpeeder | Docker镜像加速专家](https://kspeeder.istoreos.com/)：多镜像并发下载，动态负载均衡，断点续传支持，Docker镜像代理服务
 
@@ -249,6 +249,7 @@ sudo systemctl restart containerd
   - **数据持久化**：可配置的卷挂载
   - **自定义配置**：适应不同环境的灵活设置
 
+
 ## Nas 群辉 Docker pull 代理设置方法
 
 设备：黑群晖7.0.1
@@ -260,6 +261,20 @@ Environment="HTTP_PROXY=http://127.0.0.1:1080"
 Environment="HTTPS_PROXY=http://127.0.0.1:1080"
 Environment="NO_PROXY=localhost,127.0.0.0/8,192.168.0.0/16,172.16.0.0/12,10.0.0.0/8"
 ```
+
+## Dockerhub使用常见问题
+
+### hub.docker.com 无法访问，如何查看镜像信息
+
+此处以 library/mysql 为例，使用 `DockerHub国内镜像加速源列表` 里的 Docker Hub Search 搜索镜像即可，或者直接替换 `https://hub.docker.com` 为你所用的代理地址。
+
+```
+# 官方地址
+https://hub.docker.com/_/mysql
+# 替代后地址
+https://docker.mybacc.com/_/mysql
+```
+
 
 ## 博主推荐仓库
 

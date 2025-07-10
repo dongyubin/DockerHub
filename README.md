@@ -26,7 +26,7 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 
 > 请注意！有些镜像站仅提供基础镜像或白名单镜像，如果某个加速地址无法拉取到所需的镜像，可以尝试切换到其他地址。有些代理站点是热心网友自费搭建的，请务必合理使用。
 
-**2025年6月24日 亲测国内现在还能用的 Docker 镜像**
+**2025年7月10日 亲测国内现在还能用的 Docker 镜像**
 
 | DockerHub镜像仓库                                            | 镜像加速器地址                                    |
 | ------------------------------------------------------------ | ------------------------------------------------- |
@@ -44,6 +44,7 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 | [Docker离线镜像下载](https://demo.52013120.xyz/images.html)  | `https://demo.52013120.xyz`                       |
 | [Docker离线镜像下载](https://proxy.vvvv.ee/images.html)      | `https://proxy.vvvv.ee`                           |
 | [xdark.top](https://xdark.top/)（需赞助拉取）                |                                                   |
+| [容器镜像管理中心 - Docker & GitHub](https://registry.cyou/) | `https://registry.cyou`                           |
 | [腾讯云](https://cloud.tencent.com/document/product/457/9113)（只支持内网访问，不支持外网域名访问加速。[轻量应用服务器 安装 Docker 并配置镜像加速源](https://cloud.tencent.com/document/product/1207/45596)） | `https://mirror.ccs.tencentyun.com`               |
 | [阿里云](https://cr.console.aliyun.com/)（需登录，系统分配） | `https://<your_code>.mirror.aliyuncs.com`         |
 
@@ -124,7 +125,8 @@ sudo tee /etc/docker/daemon.json <<EOF
     "https://hub.rat.dev",
     "https://docker.m.daocloud.io",
     "https://demo.52013120.xyz",
-    "https://proxy.vvvv.ee"
+    "https://proxy.vvvv.ee",
+    "https://registry.cyou"
   ]
 }
 EOF
@@ -168,7 +170,8 @@ sudo tee /etc/containerd/config.toml <<EOF
         "https://hub.rat.dev",
         "https://docker.m.daocloud.io",
         "https://demo.52013120.xyz",
-        "https://proxy.vvvv.ee"
+        "https://proxy.vvvv.ee",
+        "https://registry.cyou"
       ]
 EOF
 sudo systemctl daemon-reload
@@ -202,7 +205,24 @@ sudo systemctl restart containerd
     registry.k8s.io   >>>>>   k8s.chenby.cn
     ```
 
+- 加速服务全部迁移至 Cloudflare Snippets 具有无限流量、无限请求数、极低延迟、CDN边缘节点直接响应的优势
+  多仓库加速支持
+  我们新增以下专用子域名加速服务：
+
+  ```sh
+  gcr.registry.cyou        --> gcr.io
+  k8sgcr.registry.cyou     --> k8s.gcr.io
+  quay.registry.cyou       --> quay.io
+  k8s.registry.cyou        --> registry.k8s.io
+  ghcr.registry.cyou       --> ghcr.io
+  n8n.registry.cyou        --> docker.n8n.io
+  cloudsmith.registry.cyou --> docker.cloudsmith.io
+  nvcr.registry.cyou       --> nvcr.io
+  ```
+
 ## Docker daemon 配置代理
+
+Docker daemon 配置代理
 
 - 参考 [Docker daemon 配置代理](https://docs.docker.com/config/daemon/systemd/#httphttps-proxy)
 - [docker 设置代理，以及国内加速镜像设置](https://neucrack.com/p/286)：国内 Docker 代理来实现加速下载，docker pull 使用 http proxy

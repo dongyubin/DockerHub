@@ -26,13 +26,14 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 
 > 请注意！有些镜像站仅提供基础镜像或白名单镜像，如果某个加速地址无法拉取到所需的镜像，可以尝试切换到其他地址。有些代理站点是热心网友自费搭建的，请务必合理使用。
 
-**2025年7月10日 亲测国内现在还能用的 Docker 镜像**
+**2025年9月14日 亲测国内现在还能用的 Docker 镜像**
 
 | DockerHub镜像仓库                                            | 镜像加速器地址                                    |
 | ------------------------------------------------------------ | ------------------------------------------------- |
 |                                                              | `https://docker.1panel.live/`（限制只能中国地区） |
 | [毫秒镜像](https://1ms.run/)                                 | `docker.1ms.run`                                  |
 | [轩辕镜像](https://docker.xuanyuan.me/)（[会员版](https://dev.xuanyuan.dev)） | `https://docker.xuanyuan.me`                      |
+| [Docker Hub 镜像搜索](https://docker.xpg666.xyz/)            | `https://docker.xpg666.xyz/`                      |
 | [Docker Hub Search](https://dytt.online/)                    | `https://dytt.online`                             |
 | [Docker Hub Search](https://lispy.org/)                      | `https://lispy.org`                               |
 | [Docker Hub Search](https://docker.xiaogenban1993.com/)      | `docker.xiaogenban1993.com`                       |
@@ -268,6 +269,28 @@ Docker daemon 配置代理
   - **Docker Compose支持**：使用compose文件轻松部署
   - **数据持久化**：可配置的卷挂载
   - **自定义配置**：适应不同环境的灵活设置
+  
+- [sky22333/hubproxy](https://github.com/sky22333/hubproxy)（[搭建教程](https://www.wxy97.com/archives/94a3eaf6-b819-49e3-a879-364b224d5746)）: 自托管轻量级、高性能的多功能代理加速服务，提供 Docker 镜像加速、GitHub 加速、下载离线镜像等功能。单域名实现所有功能，支持仓库审计。流式转发，无缓存。
+
+  - 🐳 **Docker 镜像加速** - 单域名实现 Docker Hub、GHCR、Quay 等多个镜像仓库加速，流式传输优化拉取速度。
+  - 🐳 **离线镜像包** - 支持下载离线镜像包，流式传输加防抖设计。
+  - 📁 **GitHub 文件加速** - 加速 GitHub Release、Raw 文件下载，支持`api.github.com`，脚本嵌套加速等等
+  - 🤖 **AI 模型库支持** - 支持 Hugging Face 模型下载加速
+  - 🛡️ **智能限流** - IP 限流保护，防止滥用
+  - 🚫 **仓库审计** - 强大的自定义黑名单，白名单，同时审计镜像仓库，和GitHub仓库
+  - 🔍 **镜像搜索** - 在线搜索 Docker 镜像
+  - ⚡ **轻量高效** - 基于 Go 语言，单二进制文件运行，资源占用低，优雅的内存清理机制。
+  - 🔧 **统一配置** - 统一配置管理
+  
+- [xiaofei/docker-sync · Cloud Native Build](https://cnb.cool/xiaofei/docker-sync)：用于将外部Docker镜像同步到CNB（Cloud Native Builder）制品库，以及支持将外部资源离线下载到CNB平台。本工具具有以下特点：
+
+  - ✨ **零安装、即开即用** - 无需任何安装步骤，Fork即可使用
+  - 🚀 **操作极其简单** - 通过直观的界面完成所有操作
+  - 支持同步几乎所有公开的外部Docker仓库镜像
+  - 支持 amd64、arm64、arm/v7、ppc64le、s390x、mips64le、loong64等多种架构的镜像
+  - 支持离线下载外部资源，并获取CNB平台上的永久有效链接
+  - 特别适用于CNB支持加速的域名资源（如 GitHub 等）
+  - 
 
 
 ## Nas 群辉 Docker pull 代理设置方法

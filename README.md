@@ -26,17 +26,14 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 
 > 请注意！有些镜像站仅提供基础镜像或白名单镜像，如果某个加速地址无法拉取到所需的镜像，可以尝试切换到其他地址。有些代理站点是热心网友自费搭建的，请务必合理使用。
 
-**2025年10月22日 亲测国内现在还能用的 Docker 镜像**
+**2025年12月16日 亲测国内现在还能用的 Docker 镜像**
 
 | DockerHub镜像仓库                                            | 镜像加速器地址                                    |
 | ------------------------------------------------------------ | ------------------------------------------------- |
 |                                                              | `https://docker.1panel.live/`（限制只能中国地区） |
 | [毫秒镜像](https://1ms.run/)                                 | `docker.1ms.run`                                  |
 | [轩辕镜像](https://docker.xuanyuan.me/)（[会员版](https://xuanyuan.cloud/)） | `https://docker.xuanyuan.me`                      |
-| [Docker Hub 镜像搜索](https://docker.xpg666.xyz/)            | `https://docker.xpg666.xyz/`                      |
-| [Docker Hub Search](https://dytt.online/)                    | `https://dytt.online`                             |
-| [Docker Hub Search](https://lispy.org/)                      | `https://lispy.org`                               |
-| [Docker Hub Search](https://docker.xiaogenban1993.com/)      | `docker.xiaogenban1993.com`                       |
+| [渡渡鸟镜像同步站](https://docker.aityp.com/)                | `https://docker.aityp.com`                        |
 | [Docker Hub 镜像加速服务](https://docker-0.unsee.tech/)      | `https://docker-0.unsee.tech`                     |
 | [Docker Hub Search](https://666860.xyz/)                     | `666860.xyz`                                      |
 |                                                              | `hub.rat.dev`                                     |
@@ -54,10 +51,12 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 | DockerHub镜像仓库                                            | 镜像加速器地址                                               |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [docker-registry-mirrors](https://github.com/kubesre/docker-registry-mirrors): 支持 Docker Hub, GitHub, Google, k8s, Quay, Microsoft 等镜像仓库. | ~~dhub.kubesre.xyz~~                                         |
+| ~~[Docker Hub 镜像搜索](https://docker.xpg666.xyz/)~~        | ~~https://docker.xpg666.xyz/~~                               |
 | [Docker Proxy 镜像加速](https://dockerpull.org/)（[来源地址](https://linux.do/t/topic/114345)） | ~~`https://dockerpull.org`（在12/27被GFW封锁）/ `cjie.eu.org`（暂时备用）~~ |
 | ~~[镜像使用说明](https://dislabaiot.xyz/)~~                  | ~~https://dislabaiot.xyz~~                                   |
 | ~~[镜像加速说明](https://docker.1panel.dev/)~~               | ~~https://docker.1panel.dev~~                                |
 | ~~[镜像加速说明](https://docker.foreverlink.love/)~~         | ~~https://docker.foreverlink.love~~                          |
+| ~~[Docker Hub Search](https://docker.xiaogenban1993.com/)~~  | ~~docker.xiaogenban1993.com~~                                |
 | ~~[Dockerhub镜像加速说明](https://docker.wget.at/)~~         | ~~https://docker.wget.at~~                                   |
 | ~~[DockerHub 镜像加速代理](https://docker.anyhub.us.kg/)~~   | ~~https://docker.anyhub.us.kg~~                              |
 | ~~[DockerHub 镜像加速代理](https://hub.gog.email/)~~         | ~~https://hub.gog.email~~                                    |
@@ -103,7 +102,8 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 | ~~[Docker Hub Search](https://aicarbon.xyz/)~~               | ~~aicarbon.xyz~~                                             |
 |                                                              | ~~hub.littlediary.cn~~                                       |
 | ~~[Dockerhub镜像加速说明](https://a.ussh.net/)~~             | ~~https://a.ussh.net~~                                       |
-| [Docker Hub Search](https://docker.yomansunter.com/)         | ~~docker.yomansunter.com~~                                   |
+| ~~[Docker Hub Search](https://docker.yomansunter.com/)~~     | ~~docker.yomansunter.com~~                                   |
+| ~~[Docker Hub Search](https://lispy.org/)~~                  | ~~https://lispy.org~~                                        |
 
 ### 配置Dockerhub镜像源使用教程
 
@@ -118,7 +118,6 @@ sudo tee /etc/docker/daemon.json <<EOF
   "registry-mirrors": [
     "https://docker.1panel.live",
     "https://docker.1ms.run",
-    "https://dytt.online",
     "https://docker-0.unsee.tech",
     "https://lispy.org",
     "https://docker.xiaogenban1993.com",
@@ -127,7 +126,8 @@ sudo tee /etc/docker/daemon.json <<EOF
     "https://docker.m.daocloud.io",
     "https://demo.52013120.xyz",
     "https://proxy.vvvv.ee",
-    "https://registry.cyou"
+    "https://registry.cyou",
+    "https://docker.aityp.com"
   ]
 }
 EOF
@@ -163,7 +163,6 @@ sudo tee /etc/containerd/config.toml <<EOF
       endpoint = [
         "https://docker.1panel.live",
         "https://docker.1ms.run",
-        "https://dytt.online",
         "https://lispy.org",
         "https://docker-0.unsee.tech",
         "https://docker.xiaogenban1993.com",
@@ -172,7 +171,8 @@ sudo tee /etc/containerd/config.toml <<EOF
         "https://docker.m.daocloud.io",
         "https://demo.52013120.xyz",
         "https://proxy.vvvv.ee",
-        "https://registry.cyou"
+        "https://registry.cyou",
+        "https://docker.aityp.com"
       ]
 EOF
 sudo systemctl daemon-reload
@@ -290,7 +290,77 @@ Docker daemon 配置代理
   - 支持 amd64、arm64、arm/v7、ppc64le、s390x、mips64le、loong64等多种架构的镜像
   - 支持离线下载外部资源，并获取CNB平台上的永久有效链接
   - 特别适用于CNB支持加速的域名资源（如 GitHub 等）
-  - 
+  
+- [xixu-me/xget](https://github.com/xixu-me/Xget): Ultra-high-performance, secure, all-in-one acceleration engine for developer resources
+
+  - ⚡ 极速性能 - 突破传统加速器瓶颈
+
+    - **⚡ 毫秒级响应**：Cloudflare 全球 330+ 边缘节点，平均响应时间 < 50ms
+    - **🌐 HTTP/3 极速协议**：启用最新 HTTP/3 协议，连接延迟降低 40%，传输速度提升 30%
+    - **📦 智能多重压缩**：gzip、deflate、brotli 三重压缩算法，传输效率提升 60%
+    - **🔗 零延迟预连接**：连接预热和保持活跃，消除握手开销，实现秒级响应
+    - **⚡ 并行分片下载**：完整支持 HTTP Range 请求，多线程下载速度倍增
+    - **🎯 智能路由优化**：自动选择最优传输路径，避开网络拥堵节点
+
+  - 🌐 多平台深度集成
+
+    - **一站式多平台支持**：统一支持各种开发场景中的主流平台
+    - **智能识别与转换**：自动识别平台前缀并转换为目标平台的正确 URL 结构
+    - **一致的加速体验**：无论文件类型或来源，均可享受统一且稳定的极速下载体验
+
+  - 🔒 企业级安全保障
+
+    - 多层安全标头
+      - `Strict-Transport-Security`：强制 HTTPS 传输，预防中间人攻击
+      - `X-Frame-Options: DENY`：防止点击劫持攻击
+      - `X-XSS-Protection`：内置 XSS 防护机制
+      - `Content-Security-Policy`：严格的内容安全策略
+      - `Referrer-Policy`：控制引用信息泄露
+    - 请求验证机制
+      - HTTP 方法白名单：常规请求限制为 GET/HEAD，Git 操作动态允许 POST
+      - 路径长度限制：防止超长 URL 攻击（最大 2048 字符）
+      - 输入清理：防止路径遍历和注入攻击
+    - **超时保护**：30 秒请求超时，防止资源耗尽和恶意请求
+
+    🚀 现代架构与可靠性
+
+    - 智能重试机制
+      - 最大 3 次重试，线性延迟策略（1000ms × 重试次数）
+      - 自动错误恢复，提高下载成功率
+      - 超时检测和中断处理
+    - 高效缓存策略
+      - 1800 秒（30 分钟）默认缓存时长，显著减少源站压力
+      - Git 操作跳过缓存，确保实时性
+      - 基于 Cloudflare Cache API 的边缘缓存
+    - 性能监控系统
+      - 内置 `PerformanceMonitor` 类，实时追踪请求各阶段耗时
+      - 通过 `X-Performance-Metrics` 响应头提供详细性能数据
+      - 支持缓存命中率统计和优化建议
+    - 🎯 Git 协议完全兼容
+
+    - 智能协议检测
+      - 自动识别 Git 特定端点（`/info/refs`、`/git-upload-pack`、`/git-receive-pack`）
+      - 检测 Git 客户端 User-Agent 模式
+      - 支持 `service=git-upload-pack` 等查询参数
+    - 完整操作支持
+      - `git clone`：完整存储库克隆，支持浅克隆和分支指定
+      - `git push`：代码推送和分支管理
+      - `git pull/fetch`：增量更新和远程同步
+      - `git submodule`：子模块递归克隆
+    - 协议优化
+      - 保持 Git 专用请求头和认证信息
+      - 智能 User-Agent 处理（默认 `git/2.34.1`）
+      - 支持 Git LFS 大文件传输
+    - 📱 生态系统集成
+
+    - 专用浏览器扩展：Xget Now 提供无缝体验
+      - 自动 URL 重定向，无需手动修改 URL
+      - 支持自定义 Xget 实例域名
+      - 多平台偏好设置和黑白名单管理
+      - 本地处理，确保隐私安全
+    - **下载工具兼容**：完美支持 wget、cURL、aria2、IDM 等主流下载工具
+    - **CI/CD 集成**：可直接在 GitHub Actions、GitLab CI 等环境中使用
+
 
 
 ## Nas 群辉 Docker pull 代理设置方法

@@ -32,14 +32,10 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 | ------------------------------------------------------------ | ------------------------------------------------- |
 |                                                              | `https://docker.1panel.live/`（限制只能中国地区） |
 | [毫秒镜像](https://1ms.run/)                                 | `docker.1ms.run`                                  |
-| [轩辕镜像](https://docker.xuanyuan.me/)（[会员版](https://xuanyuan.cloud/)） | `https://docker.xuanyuan.me`                      |
-| [渡渡鸟镜像同步站](https://docker.aityp.com/)                | `https://docker.aityp.com`                        |
-| [Docker Hub 镜像加速服务](https://docker-0.unsee.tech/)      | `https://docker-0.unsee.tech`                     |
-| [Docker Hub Search](https://666860.xyz/)                     | `666860.xyz`                                      |
 |                                                              | `hub.rat.dev`                                     |
-| [DaoCloud 镜像站](https://github.com/DaoCloud/public-image-mirror) | `https://docker.m.daocloud.io`                    |
 | [Docker Proxy 镜像加速](https://dockerproxy.net/)            | `dockerproxy.net`                                 |
 | [Docker离线镜像下载](https://proxy.vvvv.ee/images.html)      | `https://proxy.vvvv.ee`                           |
+| [DaoCloud 镜像站](https://github.com/DaoCloud/public-image-mirror) | `https://docker.m.daocloud.io`                    |
 | [xdark.top](https://xdark.top/)（需赞助拉取）                |                                                   |
 | [容器镜像管理中心 - Docker & GitHub](https://registry.cyou/) | `https://registry.cyou`                           |
 | [腾讯云](https://cloud.tencent.com/document/product/457/9113)（只支持内网访问，不支持外网域名访问加速。[轻量应用服务器 安装 Docker 并配置镜像加速源](https://cloud.tencent.com/document/product/1207/45596)） | `https://mirror.ccs.tencentyun.com`               |
@@ -103,6 +99,18 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 | ~~[Dockerhub镜像加速说明](https://a.ussh.net/)~~             | ~~https://a.ussh.net~~                                       |
 | ~~[Docker Hub Search](https://docker.yomansunter.com/)~~     | ~~docker.yomansunter.com~~                                   |
 | ~~[Docker Hub Search](https://lispy.org/)~~                  | ~~https://lispy.org~~                                        |
+| [~~轩辕镜像](https://docker.xuanyuan.me/)（[会员版](https://xuanyuan.cloud/)）~~ | ~~https://docker.xuanyuan.me~~                               |
+| ~~[Docker Hub 镜像加速服务](https://docker-0.unsee.tech/)~~  | ~~https://docker-0.unsee.tech~~                              |
+| ~~[Docker Hub Search](https://666860.xyz/)~~                 | ~~666860.xyz~~                                               |
+| ~~[Docker Hub Search](https://docker.mhtsec.com/)~~          | ~~`https://docker.mhtsec.com`~~                              |
+| ~~[Docker Hub Search](https://ligang666.xyz/)~~              | ~~https://ligang666.xyz~~                                    |
+| ~~[Docker Hub Search](https://docker.shaunyang.site/)~~      | ~~https://docker.shaunyang.site~~                            |
+| ~~[Docker Hub Search](https://bjoo.org/)~~                   | ~~https://bjoo.org~~                                         |
+| ~~[渡渡鸟镜像同步站](https://docker.aityp.com/)~~            | ~~https://docker.aityp.com~~                                 |
+| ~~[镜像使用说明](https://14850505.xyz/)~~                    | ~~https://14850505.xyz~~                                     |
+| ~~[镜像使用说明](https://leitong.top/)~~                     | ~~https://leitong.top~~                                      |
+| ~~[Dockerhub镜像加速说明](https://docker.lefu.men/)~~        | ~~https://docker.lefu.men~~                                  |
+| ~~[Dockerhub镜像加速说明](https://d.66.edu.pl/)~~            | ~~https://d.66.edu.pl~~                                      |
 
 ### 配置Dockerhub镜像源使用教程
 
@@ -115,18 +123,10 @@ sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<EOF
 {
   "registry-mirrors": [
-    "https://docker.1panel.live",
     "https://docker.1ms.run",
-    "https://docker-0.unsee.tech",
-    "https://lispy.org",
-    "https://docker.xiaogenban1993.com",
-    "https://666860.xyz",
     "https://hub.rat.dev",
-    "https://docker.m.daocloud.io",
-    "https://demo.52013120.xyz",
-    "https://proxy.vvvv.ee",
-    "https://registry.cyou",
-    "https://docker.aityp.com"
+    "https://dockerproxy.net",
+    "https://proxy.vvvv.ee"
   ]
 }
 EOF
@@ -160,18 +160,10 @@ sudo tee /etc/containerd/config.toml <<EOF
   [plugins."io.containerd.grpc.v1.cri".registry.mirrors]
     [plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"]
       endpoint = [
-        "https://docker.1panel.live",
-        "https://docker.1ms.run",
-        "https://lispy.org",
-        "https://docker-0.unsee.tech",
-        "https://docker.xiaogenban1993.com",
-        "https://666860.xyz",
-        "https://hub.rat.dev",
-        "https://docker.m.daocloud.io",
-        "https://demo.52013120.xyz",
-        "https://proxy.vvvv.ee",
-        "https://registry.cyou",
-        "https://docker.aityp.com"
+            "https://docker.1ms.run",
+            "https://hub.rat.dev",
+            "https://dockerproxy.net",
+            "https://proxy.vvvv.ee"
       ]
 EOF
 sudo systemctl daemon-reload

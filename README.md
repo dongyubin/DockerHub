@@ -39,7 +39,6 @@ Docker Hub是 Docker 提供的一项服务，用于与您的团队查找和共�
 |                                                              | `hub.rat.dev`                                     |
 | [DaoCloud 镜像站](https://github.com/DaoCloud/public-image-mirror) | `https://docker.m.daocloud.io`                    |
 | [Docker Proxy 镜像加速](https://dockerproxy.net/)            | `dockerproxy.net`                                 |
-| [Docker离线镜像下载](https://demo.52013120.xyz/images.html)  | `https://demo.52013120.xyz`                       |
 | [Docker离线镜像下载](https://proxy.vvvv.ee/images.html)      | `https://proxy.vvvv.ee`                           |
 | [xdark.top](https://xdark.top/)（需赞助拉取）                |                                                   |
 | [容器镜像管理中心 - Docker & GitHub](https://registry.cyou/) | `https://registry.cyou`                           |
